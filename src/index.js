@@ -1,7 +1,18 @@
 require('dotenv').config();
 
-console.log('Hello World!');
+const puppeteer = require('puppeteer');
 
-console.log(process.env.USERNAME);
-console.log(process.env.PASSWORD);
-console.log(process.env.ENVIRONMENT);
+(async () => {
+  try {
+    const browser = await puppeteer.launch({
+      headless: false,
+    });
+    const page = await browser.newPage();
+  
+    await page.goto(process.env.LIST_GENERATOR_URL, {
+      waitUntil: 'networkidle2'
+    });
+  } catch (e) {
+    console.error(e);
+  }
+})();
