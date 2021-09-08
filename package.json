@@ -1,0 +1,11 @@
+{
+  "name": "automation-challenge",
+  "version": "1.0.0",
+  "description": "Automation challenge by Incfile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vicente Gutiérrez <@vcgtz>",
+  "license": "MIT"
+}
